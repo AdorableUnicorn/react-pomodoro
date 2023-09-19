@@ -1,0 +1,135 @@
+:root{
+    --background-color: #EEEEEE;
+    --text-color: #222831;
+    --bar-color: #00ADB5;
+
+
+
+    --main-color: #EDDBC7;
+    --second-color: #F8EAD8;
+    --dark-color: #F9F5E7;
+    --darker: #A7727D;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    
+    
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+/*containers */
+
+#main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
+}
+#time-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    margin: 2%;
+}
+
+.btn_section{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.small_container{
+    margin: 20px;
+}
+
+/*buttons*/
+
+button{
+    border: none;
+    border-radius: 4px;
+    font-size: larger;
+    z-index: 1;
+}
+
+button:disabled{
+    color: var(--text-color);
+    opacity: 0.4;
+}
+
+button:hover{
+    color: var(--bar-color)
+    
+}
+
+/* small pieces eddition*/
+
+.element{
+    margin: 10px;
+}
+.text{
+    font-size: 24px;
+}
+
+#timer-label{
+    font-size: 36px;
+}
+
+#time-left{
+    font-weight: bolder;
+    font-size: 38px;;
+}
+
+/*circle animation and style */
+
+.out{
+    height: 240px;
+    width: 240px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.25),-6px -6px 10px -1px var(--background-color);
+}
+.in{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0, 0.3),
+    inset -4px -4px 6px -1px var(--background-color),
+    -0.5px -0.5px 0px var(--background-color), 0px 12px 10px -10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+circle{
+    fill:none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 692;
+}
+
+#svg_circle{
+    position: absolute;
+
+}
