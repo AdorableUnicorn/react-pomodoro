@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -247,5 +248,10 @@ class Clock extends React.Component {
   }
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Clock />);
+const root = createRoot(document.getElementById("root"));
+
+root.render(
+  <BrowserRouter basename="/react-pomodoro">
+    <Clock />
+  </BrowserRouter>
+);
